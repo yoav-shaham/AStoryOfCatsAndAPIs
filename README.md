@@ -7,14 +7,14 @@ if it is fed after the fifteen minutes but not before 16 minutes 40 seconds it
 sends back to normal email else it sends cat died email.
 # Getting Started
 In order to run the script succecfully you will need these python librarys:
-1)google.cloud 
-2)google.auth
-3)urllib
-4)boto3
-5)regex
-6)smtplib
-7)time
-8)shelve
+-google.cloud 
+-google.auth
+-urllib
+-boto3
+-regex
+-smtplib
+-time
+-shelve
 And make sure you have installed python 2.7.
 # Starting Up The Program
 In order to start the program you will need to if you want to use your own bucket and own google api update the credentials 
