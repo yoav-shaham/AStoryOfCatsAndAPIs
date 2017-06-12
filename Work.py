@@ -1,5 +1,4 @@
 from google.cloud import vision
-from google.cloud import vision
 import google.auth
 import urllib
 import boto3
@@ -17,8 +16,8 @@ credentials, project_id = google.auth.default()
 vision_client = vision.Client(project='My First Project', credentials=credentials)
 s3 = boto3.resource("s3")
 #-------------------------------------varaibles------------------
-time_til_notification = 20
-time_till_death = 50
+time_til_notification = 900
+time_till_death = 1000
 last_cheked_paths = []
 LastChekedList = []
 sent_notification = 0
