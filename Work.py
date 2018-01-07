@@ -28,35 +28,7 @@ Bucket_URL = r"https://s3.eu-central-1.amazonaws.com/catfood002/"
 Food_Labels = ["milk", "bread", "fish"]
 #---------------------------------------------------------------
 
-def send_email(subject, body):
-    """
-    Takes body and subject from pramaters, takes user, password and recepient from global variables
-    :param subject: The email's subject
-    :type subject: str
-    :param body: The email's body text
-    :type subject: str
-    """
-    global user, pwd, recipient
-    gmail_user = user
-    gmail_pwd = pwd
-    FROM = user
-    TO = recipient if type(recipient) is list else [recipient]
-    SUBJECT = subject
-    TEXT = body
 
-    # Prepare actual message
-    message = """From: %s\nTo: %s\nSubject: %s\n\n%s
-    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
-    try:
-        server = smtplib.SMTP("smtp.gmail.com", 587)
-        server.ehlo()
-        server.starttls()
-        server.login(gmail_user, gmail_pwd)
-        server.sendmail(FROM, TO, message)
-        server.close()
-        print 'successfully sent the mail'
-    except:
-        print "failed to send mail"
 
 
 def update_last_ate():
